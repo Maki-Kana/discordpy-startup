@@ -15,5 +15,5 @@ async def on_command_error(ctx, error):
 @client.event
 async def on_message(message):
     if message.content.startswith('!vote '):
-        message.add_reaction('1')
+        message.add_reaction('✖')
 bot.run(token)
