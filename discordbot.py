@@ -14,6 +14,9 @@ async def on_command_error(ctx, error):
 
 @client.event
 async def on_message(message):
-    if message.content.startswith('!vote '):
-        message.add_reaction('✖')
+    if message.content.startswith('!shorturl'):
+        embed = discord.Embed()
+        embed.set_author(name="短縮URLにしたよ", url="https://google.com")
+        embed.add_field(name="undefined", value="undefined", inline=False)
+        await self.bot.say(embed=embed)
 bot.run(token)
